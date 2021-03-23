@@ -9672,3 +9672,11 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+	
+	.project .overlay{
+		opacity:0.9!important;
+	}
+	.project .text{
+		opacity:1!important;
+		
+	}
