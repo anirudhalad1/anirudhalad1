@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'Campton-Bold';
+  src: url('Campton-Bold.eot?#iefix') format('embedded-opentype'),  url('Campton-Bold.otf')  format('opentype'),
+	     url('Campton-Bold.woff') format('woff'), url('Campton-Bold.ttf')  format('truetype'), url('Campton-Bold.svg#Campton-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

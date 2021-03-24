@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'Campton-Thin';
+  src: url('Campton-Thin.eot?#iefix') format('embedded-opentype'),  url('Campton-Thin.otf')  format('opentype'),
+	     url('Campton-Thin.woff') format('woff'), url('Campton-Thin.ttf')  format('truetype'), url('Campton-Thin.svg#Campton-Thin') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
