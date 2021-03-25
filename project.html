@@ -4,7 +4,7 @@
 <head>
 <title>Anirudha Lad- Resume</title>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 <link rel="shortcut icon" href="images/a.png" type="image/png">
 <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
@@ -17,6 +17,8 @@
 <link rel="stylesheet" href="css/flaticon.css">
 <link rel="stylesheet" href="css/icomoon.css">
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/default-skin/default-skin.css" />
 <style>
 .about-author .desc h3{
 cursor:pointer;
@@ -24,6 +26,19 @@ cursor:pointer;
 .desc {
     float: left;
     width: 100%;
+}
+figure {
+    display: inline-block;
+    width: 33.33%;
+    float: left;
+}
+img.img-thumbnail {
+    height: 162px;
+    width: 100%;
+    /* background-size: cover; */
+    /* background-origin: inherit; */
+    object-fit: cover;
+    /* background-position: top; */
 }
 </style>
 </head>
@@ -68,11 +83,11 @@ cursor:pointer;
 <div class="about-author d-flex p-4 bg-light">
 <div class="desc">
 <h3 class="float-left" data-toggle="collapse" data-target="#multiCollapse1" aria-expanded="false" aria-controls="multiCollapse1">Ondigit Web Design[Software Programmer, E-commerce(Shopify) Developer, PHP Developer] <span>(16 months)</span></h3>
-<div class="float-left collapse multi-collapse" id="multiCollapse1">
+<div class=" collapse1 multi-collapse" id="multiCollapse1">
 <hr>
-<h2 class="mb-3"># PHP Working</h2>
-<h5 class="mb-3 mt-2">1. Add Event Registration for seaandbeyond</h5>
-<p>    Developing module for Event Registration.   
+<h2 class="mb-3 col-sm-12"># PHP Working</h2>
+<h5 class="mb-3 mt-2 col-sm-12">1. Add Event Registration for seaandbeyond</h5>
+<p class="col-sm-12">    Developing module for Event Registration.   
 <br><b>Role Played:</b> Front End: Show upcoming Events, Past Event, allow registration for Upcoming Events , Make Page Responsive etc.
 <br><b>Back End:</b> Event Management, Event CRUD Operations.
 <br><b>Technology Involved:</b> Front End- HTML,CSS,JavaScript,Jquery. Back End- PHP, MySQL.
@@ -85,8 +100,9 @@ cursor:pointer;
 <br><b>Technology Involved:</b> Back End- PHP(Codeigniter Framework), MySQL, Jquery.
 <br><b>Domain: </b> <a href="https://daplatform.net/">https://daplatform.net/</a>
 </p>
-
-<h5 class="mb-3 mt-2">3. Add Group Chatting for PALNYC, and for AudaB</h5>
+<div class="row">
+<h5 class="col-md-12 col-sm-12 mb-3 mt-2">3. Add Group Chatting for PALNYC, and for AudaB</h5>
+<div class="col-md-6 col-sm-12">
 <p>    Developing Chatting module for PALNYC and for AudaB.   
 <br><b>Role Played:</b> Front End: Show parent groups based on subject, send messages, Show/delete recent messages, Make Page Responsive etc.
 <br><b>Back End:</b> Chatting Management, Group CRUD Operations.
@@ -95,22 +111,51 @@ cursor:pointer;
 <br><b>Domain: </b> <a href="https://app.audabapp.com/">https://app.audabapp.com/</a>
 
 </p>
+</div>
+<div class="col-md-6 col-sm-12">
+ <!-- Galley wrapper that contains all items -->
+      <div id="gallery1" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
-<h5 class="mb-3 mt-2">4. Add wallet module for Masterecn, and for besstpoint</h5>
-<p>    Developing Wallet module, which is used for payouts, investments.   
+        <!-- Use figure for a more semantic html -->
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
+          <a target="_blank" href="images/portfolio/ondigit/palnyc/subject_list.png" data-caption="" data-width="1200" data-height="900" itemprop="contentUrl">
+            <!-- Thumbnail -->
+            <img src="images/portfolio/ondigit/palnyc/subject_list.png" class="img-thumbnail" itemprop="thumbnail" alt="Image description">
+          </a>
+        </figure>
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <a target="_blank" href="images/portfolio/ondigit/palnyc/new_subject_create.png" data-caption="" data-width="1200" data-height="900" itemprop="contentUrl">
+            <img src="images/portfolio/ondigit/palnyc/new_subject_create.png" class="img-thumbnail" itemprop="thumbnail" alt="Image description">
+          </a>
+        </figure>
+        
+		  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <a target="_blank" href="images/portfolio/ondigit/palnyc/chat_screen.png" data-caption="" data-width="1200" data-height="900" itemprop="contentUrl">
+            <img src="images/portfolio/ondigit/palnyc/chat_screen.png" class="img-thumbnail" itemprop="thumbnail" alt="Image description">
+          </a>
+        </figure>
+      
+      </div>
+
+</div>
+
+<h5 class="mb-3 mt-2 col-sm-12">4. Add wallet module for Masterecn, and for besstpoint</h5>
+<p class="col-sm-12">    Developing Wallet module, which is used for payouts, investments.   
 <br><b>Role Played:</b> Front End: Cart Functionality, Email integration, Payment Integration, Show Category wise Product, Filter Product, Make website Responsive etc.
 <br><b>Back End:</b> Wallet Management, Wallet to wallet transfer Management, Wallet balance transfer, Wallet balance investment. 
-<br><b>Technology Involved:</b> Codeigniter framework, Front End- HTML,CSS,JavaScript,Bootstrap3.4,Jquery,AJAX, Back End- PHP, MySQL.
+<br><b>Technology Involved:</b> Codeigniter framework, Front End- HTML,CSS,JavaScript,Bootstrap3.4, Jquery, AJAX, Back End- PHP, MySQL.
 <br><b>Domain</b> Client restricted to Specify.
 </p>
-
+</div>
 <h2 class="mb-3 mt-5"># E-commerce Working(Shopify)</h2>
 <b>Role Played:</b> Front End: Design & develope Page as per customer requirement. Back End- Customize Schema / Block Code.
 <br><b>Technology Involved:</b> Front End- HTML,CSS,JavaScript,Jquery, Back End- Shopify(Liquid).
 <br>
-
-<h5 class="mb-3 mt-2">1. forme.science</h5>
-<p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
+<div class="row">
+<h5 class="mb-3 mt-2 col-md-12">1. forme.science</h5>
+<p class="col-md-6 col-sm-12">    Designed and develope Page with multiple sections. Can change content from customize settings.  
 <br><b>i) Page: </b>Landing Page
 <br><b>Page Link: </b><a href="https://forme.science/pages/landing">https://forme.science/pages/landing  </a>
 <br><b>ii) Page: </b>Science Pages 
@@ -124,7 +169,35 @@ cursor:pointer;
 <br><b>Page Link: </b><a href="https://forme.science/pages/return">https://forme.science/pages/return</a>
 
 </p>	
+<div class="col-md-6 col-sm-12">
+ <!-- Galley wrapper that contains all items -->
+      <div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
 
+        <!-- Use figure for a more semantic html -->
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
+          <a target="_blank" href="images/portfolio/ondigit/forme/screencapture-forme-science-pages-about-2021-03-23-12_14_59.png" data-caption="" data-width="1200" data-height="900" itemprop="contentUrl">
+            <!-- Thumbnail -->
+            <img src="images/portfolio/ondigit/forme/screencapture-forme-science-pages-about-2021-03-23-12_14_59.png" class="img-thumbnail" itemprop="thumbnail" alt="Image description">
+          </a>
+        </figure>
+
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <a target="_blank" href="images/portfolio/ondigit/forme/screencapture-forme-science-pages-science-2021-03-23-12_13_52.png" data-caption="" data-width="1200" data-height="900" itemprop="contentUrl">
+            <img src="images/portfolio/ondigit/forme/screencapture-forme-science-pages-science-2021-03-23-12_13_52.png" class="img-thumbnail" itemprop="thumbnail" alt="Image description">
+          </a>
+        </figure>
+        
+		  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <a target="_blank" href="images/portfolio/ondigit/forme/screencapture-forme-science-pages-return-2021-03-23-12_17_49.png" data-caption="" data-width="1200" data-height="900" itemprop="contentUrl">
+            <img src="images/portfolio/ondigit/forme/screencapture-forme-science-pages-return-2021-03-23-12_17_49.png" class="img-thumbnail" itemprop="thumbnail" alt="Image description">
+          </a>
+        </figure>
+      
+      </div>
+
+</div>
+</div>
 
 <h5 class="mb-3 mt-2">2. Mytopicals </h5>
 <p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
@@ -316,38 +389,40 @@ image 50, text 50-dynamic section with change position of any image and change t
 <div class="about-author d-flex p-4 mt-4 bg-light">
 <div class="desc">
 <h3 class="float-left" data-toggle="collapse" data-target="#multiCollapse2" aria-expanded="false" aria-controls="multiCollapse2">TechEnvision[PHP/Web Developer] <span>(10 months)</span> </h3>
-<div class="float-left collapse multi-collapse" id="multiCollapse2">
+<div class="collapse multi-collapse" id="multiCollapse2">
+<div class="row">
 <hr>
-<h5 class="mb-3 mt-2">1. E-commerce Website(ElauraArtGallery)</h5>
+<h5 class="mb-3 mt-2 col-sm-12">1. E-commerce Website(ElauraArtGallery)</h5>
+<div class="col-sm-12">
 <p>    Developing efficient system for selling Paintings online.   
 <br><b>Role Played:</b> Front End: Cart Functionality, Email integration, Payment Integration, Show Category wise Product, Filter Product, Make website Responsive etc.
 <br><b>Back End:</b> Product Management, Artist Management, Banner Management, Manage Sales/orders. 
 <br><b>Technology Involved:</b> Codeigniter framework, Front End- HTML,CSS,JavaScript,Bootstrap3.4,Jquery,AJAX, Back End- PHP, MySQL.
 <br><b>Domain(Project was Ongoing.)</b> <a href="https://np.uniquefinds-online.com/artgallery/">https://np.uniquefinds-online.com/artgallery/</a>
 </p>
-
-<h5 class="mb-3 mt-2">2. Shooting Academy Website(eliteshooting.org)</h5>
-<p>    Developing Appointment System.   
+</div>
+<h5 class="mb-3 mt-2 col-sm-12">2. Shooting Academy Website(eliteshooting.org)</h5>
+<p class="col-sm-12">    Developing Appointment System.   
 <br><b>Role Played:</b> Front End: Fill Required Personal details and select Date, websites shows which slots are available, which are booked, select available slot and confirm your slot. etc. Back End: Send Email to Academy.
 <br><b>Technology Involved:</b> Core PHP, Front End- HTML,CSS,JavaScript,Bootstrap3.4, Jquery,AJAX Back End- PHP, MySQL.
 <br><b>Domain:</b> <a href="https://www.eliteshooting.org/appointment.php">https://www.eliteshooting.org/appointment.php</a>
 </p>
 
-<h5 class="mb-3 mt-2">3. Insurance Website(srichakras.com)</h5>
-<p>    Developing Community User Panel (Admin Create Users), Community Panel (User Login to system only have access to Community Panel, User will Answer Questions asked by Customers).   
+<h5 class="mb-3 mt-2 col-sm-12">3. Insurance Website(srichakras.com)</h5>
+<p class="col-sm-12">    Developing Community User Panel (Admin Create Users), Community Panel (User Login to system only have access to Community Panel, User will Answer Questions asked by Customers).   
 <br><b>Role Played:</b> Front End: display user’s personal asked questions, answers (if logged in), otherwise show all questions, etc.
 <br><b>Back End:</b> Community User Management, Community Management, Community user only access Community Panel. 
 <br><b>Technology Involved:</b> Core PHP, Front End- HTML,CSS,JavaScript,Bootstrap3.4, Back End- PHP, MySQL.
 <br><b>Domain:</b> <a href="https://srichakras.com/community/test">https://srichakras.com/community/test</a>
 </p>
-<h5 class="mb-3 mt-2">4. E-commerce Website(BussinessForSale based in UAE)</h5>
-<p>    Developing efficient system for buying and selling services and goods such as electronics, fashion items, furniture, household goods, Properties, cars and bikes.   
+<h5 class="mb-3 mt-2 col-sm-12">4. E-commerce Website(BussinessForSale based in UAE)</h5>
+<p class="col-sm-12">    Developing efficient system for buying and selling services and goods such as electronics, fashion items, furniture, household goods, Properties, cars and bikes.   
 <br><b>Role Played:</b> Front End: Design, User management, Filters, Product Register, Product Enquiry, Wish list, Back End-Product CRUD, Manage Customers, Modify Some existing Functionality. 
 <br><b>Technology Involved: </b>Core PHP, Front End- HTML,CSS,JavaScript,Bootstrap4, Back End- PHP, MySQL.
 <br><b>Domain:</b> <a href="http://onlinedxb.com/businessuae1/index.php">http://onlinedxb.com/businessuae1/index.php</a>
 </p>
-<h5 class="mb-3 mt-2">5. E-commerce Website(triones.in)</h5>
-<p>    Developing efficient system for selling products online.   
+<h5 class="mb-3 mt-2 col-sm-12">5. E-commerce Website(triones.in)</h5>
+<p class="col-sm-12">    Developing efficient system for selling products online.   
 <br><b>Role Played: </b>Front End: Cart Functionality, Email integration, CC Avenue Payment Integration,  Show Category wise Product, Filter Product, Make website Responsive etc.
 <br><b>Back End: </b>Product Management, Modify Some existing Functionality. 
 <br><b>Technology Involved: </b>Codeigniter framework, Front End- HTML,CSS,JavaScript,Bootstrap3.4, Back End- PHP, MySQL.
@@ -358,11 +433,12 @@ image 50, text 50-dynamic section with change position of any image and change t
 </div>
 </div>
 </div>
+</div>
 
 <div class="about-author d-flex p-4 mt-4 bg-light">
 <div class="desc">
 <h3 class="float-left" data-toggle="collapse" data-target="#multiCollapse3" aria-expanded="false" aria-controls="multiCollapse3">Wolfox Services Pvt.Ltd.[PHP/Web Developer] <span>(25 months)</span></h3>
-<div class="float-left collapse multi-collapse" id="multiCollapse3">
+<div class="float-left1 collapse multi-collapse" id="multiCollapse3">
 <hr>
 <h5 class="mb-3 mt-2">1. Hospital ERP</h5>
 <h5 class="mb-3 mt-2">2. Mine ERP</h5>
@@ -412,113 +488,66 @@ image 50, text 50-dynamic section with change position of any image and change t
 </div>
 </div>
 
-<div class="pt-5 mt-5 d-none">
-<h3 class="mb-5">6 Comments</h3>
-<ul class="comment-list">
-<li class="comment">
-<div class="vcard bio">
-<img src="images/person_1.jpg" alt="Image placeholder">
-</div>
-<div class="comment-body">
-<h3>John Doe</h3>
-<div class="meta">Sept. 12, 2019 at 2:21pm</div>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-<p><a href="#" class="reply">Reply</a></p>
-</div>
-</li>
-<li class="comment">
-<div class="vcard bio">
-<img src="images/person_1.jpg" alt="Image placeholder">
-</div>
-<div class="comment-body">
-<h3>John Doe</h3>
-<div class="meta">Sept. 12, 2019 at 2:21pm</div>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-<p><a href="#" class="reply">Reply</a></p>
-</div>
-<ul class="children">
-<li class="comment">
-<div class="vcard bio">
-<img src="images/person_1.jpg" alt="Image placeholder">
-</div>
-<div class="comment-body">
-<h3>John Doe</h3>
-<div class="meta">Sept. 12, 2019 at 2:21pm</div>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-<p><a href="#" class="reply">Reply</a></p>
-</div>
-<ul class="children">
-<li class="comment">
-<div class="vcard bio">
-<img src="images/person_1.jpg" alt="Image placeholder">
-</div>
-<div class="comment-body">
-<h3>John Doe</h3>
-<div class="meta">Sept. 12, 2019 at 2:21pm</div>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-<p><a href="#" class="reply">Reply</a></p>
-</div>
-<ul class="children">
-<li class="comment">
-<div class="vcard bio">
-<img src="images/person_1.jpg" alt="Image placeholder">
-</div>
-<div class="comment-body">
-<h3>John Doe</h3>
-<div class="meta">Sept. 12, 2019 at 2:21pm</div>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-<p><a href="#" class="reply">Reply</a></p>
-</div>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="comment">
-<div class="vcard bio">
-<img src="images/person_1.jpg" alt="Image placeholder">
-</div>
-<div class="comment-body">
-<h3>John Doe</h3>
-<div class="meta">Sept. 12, 2019 at 2:21pm</div>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur quidem laborum necessitatibus, ipsam impedit vitae autem, eum officia, fugiat saepe enim sapiente iste iure! Quam voluptas earum impedit necessitatibus, nihil?</p>
-<p><a href="#" class="reply">Reply</a></p>
-</div>
- </li>
-</ul>
-
-<div class="comment-form-wrap pt-5">
-<h3 class="mb-5">Leave a comment</h3>
-<form action="#" class="p-5 bg-light">
-<div class="form-group">
-<label for="name">Name *</label>
-<input type="text" class="form-control" id="name">
-</div>
-<div class="form-group">
-<label for="email">Email *</label>
-<input type="email" class="form-control" id="email">
-</div>
-<div class="form-group">
-<label for="website">Website</label>
-<input type="url" class="form-control" id="website">
-</div>
-<div class="form-group">
-<label for="message">Message</label>
-<textarea name="" id="message" cols="30" rows="10" class="form-control"></textarea>
-</div>
-<div class="form-group">
-<input type="submit" value="Post Comment" class="btn py-3 px-4 btn-primary">
-</div>
-</form>
-</div>
-</div>
 </div> 
 
 </div>
 </div>
 </section> 
+<!-- Some spacing 😉 -->
+<div class="spacer"></div>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+  <!-- Background of PhotoSwipe. 
+           It's a separate element as animating opacity is faster than rgba(). -->
+  <div class="pswp__bg"></div>
+  <!-- Slides wrapper with overflow:hidden. -->
+  <div class="pswp__scroll-wrap">
+    <!-- Container that holds slides. 
+              PhotoSwipe keeps only 3 of them in the DOM to save memory.
+              Don't modify these 3 pswp__item elements, data is added later on. -->
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+    <div class="pswp__ui pswp__ui--hidden">
+      <div class="pswp__top-bar">
+        <!--  Controls are self-explanatory. Order can be changed. -->
+        <div class="pswp__counter"></div>
+        <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        <button class="pswp__button pswp__button--share" title="Share"></button>
+        <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+        <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+        <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+        <!-- element will get class pswp__preloader--active when preloader is running -->
+        <div class="pswp__preloader">
+          <div class="pswp__preloader__icn">
+            <div class="pswp__preloader__cut">
+              <div class="pswp__preloader__donut"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+        <div class="pswp__share-tooltip"></div>
+      </div>
+      <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+      </button>
+      <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+      </button>
+      <div class="pswp__caption">
+        <div class="pswp__caption__center"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
 <footer class="ftco-footer ftco-section">
 <div class="container">
 <div class="row mb-5">
@@ -588,8 +617,16 @@ image 50, text 50-dynamic section with change position of any image and change t
 <script src="js/jquery.animateNumber.min.js"></script>
 <script src="js/scrollax.min.js"></script>
 <script src="js/main.js"></script>
-
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe-ui-default.min.js"></script>
 </body>
+<script>
+function abc(data)
+{
+this.data=data;
+console.log(this.data);
 
+}
+abc(5);
+</script>
 </html>
