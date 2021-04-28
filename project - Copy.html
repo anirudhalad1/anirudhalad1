@@ -17,7 +17,8 @@
 <link rel="stylesheet" href="css/flaticon.css">
 <link rel="stylesheet" href="css/icomoon.css">
 <link rel="stylesheet" href="css/style.css">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/default-skin/default-skin.css" />
 <style>
 .about-author .desc h3{
 cursor:pointer;
@@ -30,7 +31,6 @@ figure {
     display: inline-block;
     width: 33.33%;
     float: left;
-	padding: 0 5px;
 }
 img.img-thumbnail {
     height: 162px;
@@ -40,80 +40,6 @@ img.img-thumbnail {
     object-fit: cover;
     /* background-position: top; */
 }
-/* The Modal (background) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 4;
-  /*padding-top: 100px;*/
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: black;
-}
-
-/* Modal Content */
-.modal-content {
-  position: relative;
-  background-color: #000;
-  margin: auto;
-  padding: 100px 0;
-  width: 90%;
-  max-width: 1200px;
-}
-
-/* The Close Button */
-.close {
-  color: white;
-  position: fixed;
-  top: 10px;
-  right: 25px;
-  font-size: 35px;
-  font-weight: bold;
-  z-index: 5;
-  text-shadow: 0 1px 0 #000;
-}
-
-.close:hover,
-.close:focus {
-  color: #999;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.mySlides {
-  display: none;
-}
-
-.cursor {
-  cursor: pointer;
-}
-
-.active,
-.demo:hover {
-  opacity: 1;
-}
-
-img.hover-shadow {
-  transition: 0.3s;
-}
-
-.hover-shadow:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-body.showModal {
-    overflow: hidden;
-}
-
-@media(max-width:767px){
-.modal-content{
-padding: 60px 0;
-}
-}
-
 </style>
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -125,13 +51,13 @@ padding: 60px 0;
 </button>
 <div class="collapse navbar-collapse" id="ftco-nav">
 <ul class="navbar-nav nav ml-auto">
-
 <li class="nav-item"><a href="index.html#home-section" class="nav-link"><span>Home</span></a></li>
 <li class="nav-item"><a href="index.html#about-section" class="nav-link"><span>About</span></a></li>
 <li class="nav-item"><a href="index.html#resume-section" class="nav-link"><span>Resume</span></a></li>
-<li class="nav-item"><a href="index.html#projects-section" class="nav-link"><span>Projects</span></a></li>
-<li class="nav-item"><a href="index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
 
+<li class="nav-item"><a href="index.html#projects-section" class="nav-link"><span>Projects</span></a></li>
+
+<li class="nav-item"><a href="index.html#contact-section" class="nav-link"><span>Contact</span></a></li>
 </ul>
 </div>
 </div>
@@ -182,29 +108,37 @@ padding: 60px 0;
 
 </p>	
 <div class="col-md-6 col-sm-12">
- 
-      <div id="gallery" class="gallery" >
-         
+ <!-- Galley wrapper that contains all items -->
+      <div id="gallery" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
         <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/forme/screencapture-forme-science-pages-about-2021-03-23-12_14_59.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
+          <a target="_blank" href="images/portfolio/ondigit/forme/screencapture-forme-science-pages-about-2021-03-23-12_14_59.png" data-caption="" data-width="1200" data-height="900" itemprop="contentUrl">
+            <!-- Thumbnail -->
+            <img src="images/portfolio/ondigit/forme/screencapture-forme-science-pages-about-2021-03-23-12_14_59.png" class="img-thumbnail" itemprop="thumbnail" alt="Image description">
+          </a>
         </figure>
 
         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <img src="images/portfolio/ondigit/forme/screencapture-forme-science-pages-science-2021-03-23-12_13_52.png" class="img-thumbnail hover-shadow cursor img_thumb" itemprop="thumbnail" alt="Image description">
+          <a target="_blank" href="images/portfolio/ondigit/forme/screencapture-forme-science-pages-science-2021-03-23-12_13_52.png" data-caption="" data-width="1200" data-height="900" itemprop="contentUrl">
+            <img src="images/portfolio/ondigit/forme/screencapture-forme-science-pages-science-2021-03-23-12_13_52.png" class="img-thumbnail" itemprop="thumbnail" alt="Image description">
+          </a>
         </figure>
         
-		<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <img src="images/portfolio/ondigit/forme/screencapture-forme-science-pages-return-2021-03-23-12_17_49.png" class="img-thumbnail hover-shadow cursor img_thumb" itemprop="thumbnail" alt="Image description">
+		  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <a target="_blank" href="images/portfolio/ondigit/forme/screencapture-forme-science-pages-return-2021-03-23-12_17_49.png" data-caption="" data-width="1200" data-height="900" itemprop="contentUrl">
+            <img src="images/portfolio/ondigit/forme/screencapture-forme-science-pages-return-2021-03-23-12_17_49.png" class="img-thumbnail" itemprop="thumbnail" alt="Image description">
+          </a>
         </figure>
       
       </div>
 
 </div>
 </div>
-<div class="row">
-<h5 class="mb-3 mt-2 col-md-12">2. Mytopicals </h5>
-<p class="col-md-6 col-sm-12">    Designed and develope Page with multiple sections. Can change content from customize settings.  
+
+<h5 class="mb-3 mt-2">2. Mytopicals </h5>
+<p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
 <br><b>i) Page: </b>About Page 
 <br>About Page with draggable small windows, can close/minimize windows, change content from customize settings
 drawingpad window to sketch etc. 
@@ -215,67 +149,25 @@ drawingpad window to sketch etc.
 <br><b>iii) Page: </b>Contact page with animation and rotate spiral on scroll
 <br><b>Page Link: </b><a target="_blank" href="https://mytopicals.com/pages/contact">https://mytopicals.com/pages/contact</a>
 </p>
-<div class="col-md-6 col-sm-12">
- 
-      <div id="gallery" class="gallery" >
-         
-        <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/mytopical/screencapture-mytopicals-pages-contact-2021-03-23-13_45_36.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>
 
-        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <img src="images/portfolio/ondigit/mytopical/screencapture-mytopicals-pages-about-2021-03-23-13_42_34.png" class="img-thumbnail hover-shadow cursor img_thumb" itemprop="thumbnail" alt="Image description">
-        </figure>
-             
-      </div>
-
-</div>
-</div>
-
-<div class="row">
-<h5 class="mb-3 mt-2 col-md-12">3. Gilesnorman</h5>
-<p class="col-md-6 col-sm-12">    Designed and develope Page with multiple sections. Can change content from customize settings.  
+<h5 class="mb-3 mt-2">3. Gilesnorman</h5>
+<p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
 <br><b>i) Page: </b>Interiors Page with dynamic blocks
 <br>
 <b>Page Link: </b><a target="_blank" href="https://gilesnorman.com/pages/interiors">https://gilesnorman.com/pages/interiors  </a>
 </p>
-<div class="col-md-6 col-sm-12">
- 
-      <div id="gallery" class="gallery" >
-         
-        <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/gilles/screencapture-gilesnorman-pages-interiors-2021-03-23-12_36_45.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>
-             
-      </div>
 
-</div>
-</div>
-
-<div class="row">
-<h5 class="mb-3 mt-2 col-md-12">4. Hummingbirdbike</h5>
-<p class="col-md-6 col-sm-12">    Designed and develope Page with multiple sections. Can change content from customize settings.  
+<h5 class="mb-3 mt-2">4. Hummingbirdbike</h5>
+<p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
 <br><b>i) Page: </b>About Page with dynamic sections
 <br>video section- change video from customize settings
 image 50, text 50-dynamic section with change position of any image and change text from customize settings
 <br>
 <b>Page Link: </b><a target="_blank" href="https://www.hummingbirdbike.com/about">https://www.hummingbirdbike.com/about  </a>
 </p>
-<div class="col-md-6 col-sm-12">
-      <div id="gallery" class="gallery" >  
-        <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-hummingbirdbike-pages-about-2021-03-23-12_12_08.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>  
-      </div>
-</div>
-</div>
 
-<div class="row">
-<h5 class="mb-3 mt-2 col-md-12">5. Indisupplements</h5>
-<p class="col-md-6 col-sm-12">    Designed and develope Page with multiple sections. Can change content from customize settings.  
+<h5 class="mb-3 mt-2">5. Indisupplements</h5>
+<p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
 <br><b>i) Page: </b>About Page with dynamic sections
 <br>
 <b>Page Link: </b><a target="_blank" href="https://indisupplements.com/pages/about">https://indisupplements.com/pages/about  </a>
@@ -283,29 +175,12 @@ image 50, text 50-dynamic section with change position of any image and change t
 <br>
 <b>Page Link: </b><a target="_blank" href="https://indisupplements.com/pages/ingredients">https://indisupplements.com/pages/ingredients </a>
 </p>
-<div class="col-md-6 col-sm-12">
- 
-      <div id="gallery" class="gallery" >
-         
-        <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-indisupplements-pages-about-2021-03-23-12_39_28.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>
-		 <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-indisupplements-pages-ingredients-2021-03-23-12_38_47.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>
-             
-      </div>
 
-</div>
-</div>
 
-<div class="row">
-<h5 class="mb-3 mt-2 col-md-12">6. Castagnoli-wine</h5>
-<p class="col-md-6 col-sm-12">    Designed and develope Page with multiple sections. Can change content from customize settings.  
+<h5 class="mb-3 mt-2">6. Castagnoli-wine</h5>
+<p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
 <br><b>i) Page: </b>Product Page <br>
-<b>Page Link: </b><a target="_blank" href="https://castagnoliwine.com/collections/specials/products/castagnoli-lavender-soap">https://castagnoliwine.com/collections/specials/products /castagnoli-lavender-soap </a>
+<b>Page Link: </b><a target="_blank" href="https://castagnoliwine.com/collections/specials/products/castagnoli-lavender-soap">https://castagnoliwine.com/collections/specials/products/castagnoli-lavender-soap </a>
 <br><b>ii) Page: </b>Account Pages (login, Register, Order list, Address)
 <br>with change image, position left/right, form background color, heading text from customize settings
 <br><b>Page Link: </b><a target="_blank" href="https://castagnoli-wine.myshopify.com/login">https://castagnoli-wine.myshopify.com/login</a>
@@ -313,22 +188,9 @@ image 50, text 50-dynamic section with change position of any image and change t
 <br><b>Page Link: </b><a target="_blank" href="https://castagnoliwine.com/pages/delivery-returns">https://castagnoliwine.com/pages/delivery-returns</a>
 
 </p>
-<div class="col-md-6 col-sm-12">
- 
-      <div id="gallery" class="gallery" >
-         
-        <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-castagnoliwine-collections-specials-products-castagnoli-lavender-soap-2021-03-23-13_07_03.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>
-             
-      </div>
 
-</div>
-</div>
-<div class="row">
-<h5 class="mb-3 mt-2 col-md-12">7. Drdavidjack</h5>
-<p class="col-md-6 col-sm-12">    Designed and develope Page with multiple sections. Can change content from customize settings.  
+<h5 class="mb-3 mt-2">7. Drdavidjack</h5>
+<p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
 <br><b>i) Page: </b>Collection Page <br>
 <b>Page Link: </b><a target="_blank" href="https://drdavidjack.com/collections/shop-all">https://drdavidjack.com/collections/shop-all </a>
 <br><b>ii) Page: </b>Account Pages (login, Register, Order list, Address)
@@ -336,24 +198,12 @@ image 50, text 50-dynamic section with change position of any image and change t
 <br><b>Page Link: </b><a target="_blank" href="https://drdavidjack.com/account/login">https://drdavidjack.com/account/login</a>
 <br><b>iii) Page: </b>Static pages with content change from page settings (CONTACT, DELIVERY & RETURNS, STOCKISTS, FAQ'S, TERMS, PRIVACY)
 <br><b>Page Link: </b><a target="_blank" href="https://drdavidjack.com/pages/contact">https://drdavidjack.com/pages/contact</a>
-</p>
-<div class="col-md-6 col-sm-12">
-      <div id="gallery" class="gallery" >
-        <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-drdavidjack-pages-contact-2021-03-23-13_11_19.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>   
-		<!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-drdavidjack-collections-shop-all-2021-03-23-13_53_13.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>   
-      </div>
-</div>
-</div>
 
-<div class="row">
-<h5 class="mb-3 mt-2 col-md-12">8. Kendamil </h5>
-<p class="col-md-6 col-sm-12">    Designed and develope Page with multiple sections. Can change content from customize settings.  
+</p>
+
+
+<h5 class="mb-3 mt-2">8. Kendamil </h5>
+<p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
 <br><b>i) Page: </b>About Page and Review Page
 <br><b>Page Link: </b><a target="_blank" href="https://kendamil.com/pages/about">https://kendamil.com/pages/about  </a>
 <br><b>Page Link: </b><a href="https://kendamil.com/pages/reviews">https://kendamil.com/pages/reviews  </a>
@@ -363,24 +213,9 @@ image 50, text 50-dynamic section with change position of any image and change t
 <br><b>iii) Page: </b>Static pages with content change from page settings (Contact,Delivery & Returns,FAQs,Careers,Terms,Privacy & Cookies)
 <br><b>Page Link: </b><a target="_blank" href="https://kendamil.com/pages/contact-us">https://kendamil.com/pages/contact-us</a>
 </p>
-<div class="col-md-6 col-sm-12">
-      <div id="gallery" class="gallery" >
-        <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-kendamil-pages-about-2021-03-23-15_01_16.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>   
-		 <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-kendamil-pages-reviews-2021-03-23-19_12_24.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>   
-      </div>
-</div>
-</div>
 
-
-<div class="row">
-<h5 class="mb-3 mt-2 col-md-12">9. Musclemarylondon </h5>
-<p class="col-md-6 col-sm-12">    Designed and develope Page with multiple sections. Can change content from customize settings.  
+<h5 class="mb-3 mt-2">9. Musclemarylondon </h5>
+<p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
 <br><b>i) Page: </b>Reward Page 
 <br><b>Page Link: </b><a target="_blank" href="https://musclemary.co.uk/pages/rewards">https://musclemary.co.uk/pages/rewards  </a>
 <br><b>ii) Page: </b>Account Pages (login, Register, Order list, Address)
@@ -389,24 +224,10 @@ image 50, text 50-dynamic section with change position of any image and change t
 <br><b>iii) Page: </b>Static pages with content change from page settings (Contact,Delivery & Returns,FAQs,Careers,Terms,Privacy & Cookies)
 <br><b>Page Link: </b><a target="_blank" href="https://musclemary.co.uk/pages/contact">https://musclemary.co.uk/pages/contact</a>
 </p>
-<div class="col-md-6 col-sm-12">
-      <div id="gallery" class="gallery" >
-        <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-musclemary-co-uk-account-login-2021-03-23-14_31_24.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>  
-		 <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-musclemary-co-uk-pages-rewards-2021-03-23-14_35_21.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>  
-			
-      </div>
-</div>
-</div>
 
-<div class="row">
-<h5 class="mb-3 mt-2 col-md-12">10. Weareopaya </h5>
-<p class="col-md-6 col-sm-12">    Designed and develope Page with multiple sections. Can change content from customize settings.  
+
+<h5 class="mb-3 mt-2">10. Weareopaya </h5>
+<p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
 <br><b>i) Page: </b>Consultation Page 
 <br><b>Page Link: </b><a target="_blank" href="https://weareopaya.com/pages/consultation">https://weareopaya.com/pages/consultation  </a>
 <br><b>ii) Page: </b>Account Pages (login, Register, Order list, Address)
@@ -415,23 +236,9 @@ image 50, text 50-dynamic section with change position of any image and change t
 <br><b>iii) Page: </b>Blog listing Page and article page
 <br><b>Page Link: </b><a target="_blank" href="https://weareopaya.com/blogs/news">https://weareopaya.com/blogs/news</a>
 </p>
-<div class="col-md-6 col-sm-12">
-      <div id="gallery" class="gallery" >
-        <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-weareopaya-blogs-news-2021-03-23-13_52_17.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>   
-		  <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-weareopaya-blogs-news-vulva-shame-2021-03-23-13_51_46.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>   
-      </div>
-</div>
-</div>
 
-<div class="row">
-<h5 class="mb-3 mt-2 col-md-12">11. Something Blue (not live, under development)</h5>
-<div class="col-md-6 col-sm-12"><p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
+<h5 class="mb-3 mt-2">11. Something Blue (not live, under development)</h5>
+<p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
 <br><b>i) Page: </b>Home Page (5 Sections)
 <ul>
 <li>Hero Section with chnage image, text from customize from customize settings</li>
@@ -448,28 +255,9 @@ image 50, text 50-dynamic section with change position of any image and change t
 <br><b>iv) Page: </b>Account Pages (login, Register, Order list, Address)
 <br><b>Page Link: </b><a href="https://something-blue-by-ostro.myshopify.com/account/login">https://something-blue-by-ostro.myshopify.com/account/login</a>
 </p>
-</div>
-<div class="col-md-6 col-sm-12">
-      <div id="gallery" class="gallery" >
-        <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-something-blue-by-ostro-myshopify-2021-03-23-18_56_56.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>   
-		  <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-something-blue-by-ostro-myshopify-blogs-news-2021-03-23-18_46_42.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>   
-		<!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-something-blue-by-ostro-myshopify-pages-story-2021-03-23-18_44_41.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>   
-      </div>
-</div>
-</div>
 
-<div class="row">
-<h5 class="mb-3 mt-2 col-md-12">12. Heath London (not live, under development)</h5>
-<div class="col-md-6 col-sm-12"><p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
+<h5 class="mb-3 mt-2">12. Heath London (not live, under development)</h5>
+<p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
 <br><b>i) Page: </b>Home Page (2 Sections)
 <ul>
 <li>Hero Section with chnage image, text from customize from customize settings</li>
@@ -477,19 +265,9 @@ image 50, text 50-dynamic section with change position of any image and change t
 </ul>
 <b>Page Link: </b><a href="http://heath-london.myshopify.com/">http://heath-london.myshopify.com/  </a>
 </p>
-</div>
-<div class="col-md-6 col-sm-12">
-      <div id="gallery" class="gallery" >
-        <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-heath-london-myshopify-2021-03-23-14_44_28.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>    
-      </div>
-</div>
-</div>
-<div class="row">
-<h5 class="mb-3 mt-2 col-md-12">13. Eat Kyoot (not live, under development)</h5>
-<p class="col-md-6 col-sm-12">    Designed and develope Page with multiple sections. Can change content from customize settings.  
+
+<h5 class="mb-3 mt-2">13. Eat Kyoot (not live, under development)</h5>
+<p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
 <br><b>i) Page: </b>About Page with draggable small windows, can close/minimize windows, change content from customize settings
 <br><b>Page Link: </b><a href="https://www.eatkyoot.com/pages/about">https://www.eatkyoot.com/pages/about  </a>
 <br><b>ii) Page: </b>Account Pages (login, Register, Order list, Address)
@@ -498,48 +276,17 @@ image 50, text 50-dynamic section with change position of any image and change t
 <br><b>iii) Page: </b>Static pages with content change from page settings (Contact,Delivery & Returns,FAQs,Careers,Terms,Privacy & Cookies)
 <br><b>Page Link: </b><a href="https://www.eatkyoot.com/pages/contact">https://www.eatkyoot.com/pages/contact</a>
 </p>
-<div class="col-md-6 col-sm-12">
-      <div id="gallery" class="gallery" >
-        <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-eatkyoot-account-login-2021-03-23-14_55_51.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>   
-		  <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-eatkyoot-pages-about-2021-03-23-14_51_01.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>   
-		 <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-eatkyoot-pages-contact-2021-03-23-14_55_28.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>  
-      </div>
-</div>
-</div>
 
-<div class="row">
-<h5 class="mb-3 mt-2 col-md-12">14. Matturit (not live, under development)</h5>
-<p class="col-md-6 col-sm-12">    Designed and develope Page with multiple sections. Can change content from customize settings.  
+<h5 class="mb-3 mt-2">14. Matturit (not live, under development)</h5>
+<p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
 <br><b>i) Page: </b>Account Pages (Login, Register, Order list, Address)
 <br>with change image, position left/right, form background color, heading text from customize settings
 <br><b>Page Link: </b><a href="https://matturi.myshopify.com/account/login">https://matturi.myshopify.com/account/login</a>
 </p>
-<div class="col-md-6 col-sm-12">
-      <div id="gallery" class="gallery" >
-        <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-matturi-myshopify-account-addresses-2021-03-23-14_40_45.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>   
-		  <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-matturi-myshopify-account-login-2021-03-23-14_39_03.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>   
-      </div>
-</div>
-</div>
 
-<div class="row">
-<h5 class="mb-3 mt-2 col-md-12">15. firia-london (not live, under development)</h5>
-<div class="col-md-6 col-sm-12"><p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
+
+<h5 class="mb-3 mt-2">15. firia-london (not live, under development)</h5>
+<p>    Designed and develope Page with multiple sections. Can change content from customize settings.  
 <br><b>i) Page: </b>Home Page (4 Sections)
 <ul>
 <li>Modify Hero Slider by requirement</li>
@@ -556,23 +303,7 @@ image 50, text 50-dynamic section with change position of any image and change t
 <br><b>iv) Page: </b>Account Pages (login, Register, Order list, Address)
 <br><b>Page Link: </b><a href="https://firia-london.myshopify.com/account/login">https://firia-london.myshopify.com/account/login</a>
 </p>
-</div>
-<div class="col-md-6 col-sm-12">
-      <div id="gallery" class="gallery" >
-        <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-firia-london-myshopify-2021-03-23-14_01_44.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>   
-		  <!-- Use figure for a more semantic html -->
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-firia-london-myshopify-pages-about-2021-03-23-13_58_38.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>  
-        <figure itemprop="associatedMedia" >
-               <img src="images/portfolio/ondigit/screencapture-firia-london-myshopify-pages-ingredients-2021-03-23-13_57_46.png" class="img-thumbnail hover-shadow cursor img_thumb" alt="Image description">
-        </figure>   		
-      </div>
-</div>
-</div>
+
 
 
 
@@ -606,19 +337,32 @@ image 50, text 50-dynamic section with change position of any image and change t
 </p>
 </div>
 <div class="col-md-6 col-sm-12">
+ <!-- Galley wrapper that contains all items -->
+      <div id="gallery1" class="gallery" itemscope itemtype="http://schema.org/ImageGallery">
+
+        <!-- Use figure for a more semantic html -->
         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
           <!-- Link to the big image, not mandatory, but usefull when there is no JS -->
-            <img src="images/portfolio/ondigit/palnyc/subject_list.png" class="img-thumbnail hover-shadow cursor img_thumb" itemprop="thumbnail" alt="Image description">
+          <a target="_blank" href="images/portfolio/ondigit/palnyc/subject_list.png" data-caption="" data-width="1200" data-height="900" itemprop="contentUrl">
+            <!-- Thumbnail -->
+            <img src="images/portfolio/ondigit/palnyc/subject_list.png" class="img-thumbnail" itemprop="thumbnail" alt="Image description">
+          </a>
         </figure>
 
         <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <img src="images/portfolio/ondigit/palnyc/new_subject_create.png" class="img-thumbnail hover-shadow cursor img_thumb" itemprop="thumbnail" alt="Image description">
-          
+          <a target="_blank" href="images/portfolio/ondigit/palnyc/new_subject_create.png" data-caption="" data-width="1200" data-height="900" itemprop="contentUrl">
+            <img src="images/portfolio/ondigit/palnyc/new_subject_create.png" class="img-thumbnail" itemprop="thumbnail" alt="Image description">
+          </a>
         </figure>
         
-		<figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-            <img src="images/portfolio/ondigit/palnyc/chat_screen.png" class="img-thumbnail hover-shadow cursor img_thumb" itemprop="thumbnail" alt="Image description">  
+		  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+          <a target="_blank" href="images/portfolio/ondigit/palnyc/chat_screen.png" data-caption="" data-width="1200" data-height="900" itemprop="contentUrl">
+            <img src="images/portfolio/ondigit/palnyc/chat_screen.png" class="img-thumbnail" itemprop="thumbnail" alt="Image description">
+          </a>
         </figure>
+      
+      </div>
+
 </div>
 
 <h5 class="mb-3 mt-2 col-sm-12">4. Add wallet module for Masterecn, and for besstpoint</h5>
@@ -798,14 +542,7 @@ image 50, text 50-dynamic section with change position of any image and change t
   </div>
 </div>
 
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
-    <div class="mySlides">
-      <img src="" style="width:100%">
-    </div>
-  </div>
-</div>
+
 
 
 <footer class="ftco-footer ftco-section">
@@ -877,29 +614,16 @@ image 50, text 50-dynamic section with change position of any image and change t
 <script src="js/jquery.animateNumber.min.js"></script>
 <script src="js/scrollax.min.js"></script>
 <script src="js/main.js"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.0/photoswipe-ui-default.min.js"></script>
 </body>
 <script>
+function abc(data)
+{
+this.data=data;
+console.log(this.data);
 
-function closeModal() {
-   toggle_cmp();
 }
-$(document).ready(function(){
-		$('.img_thumb').click(function(){
-		   var src=$(this).attr('src');
-		   console.log(src);
-		   toggle_cmp();
-		  
-		   $('.mySlides img').attr('src',src);
-		   
-		});
-});
-	   
-function toggle_cmp(){
-		$('#myModal').toggle();
-		$('.mySlides').toggle();
-		$('body').toggleClass('showModal');
-}
-
+abc(5);
 </script>
 </html>
